@@ -59,3 +59,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// 文档预览平滑滚动
+document.querySelectorAll('.doc-preview').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// 高亮当前预览的文档
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.background = 'rgba(67, 97, 238, 0.05)';
+            entry.target.style.borderLeft = `4px solid var(--primary-color)`;
+            entry.target.style.paddingLeft = '1rem';
+        }
+    });
+}, observerOptions);
+
+// 观察所有PDF预览区域
+document.querySelectorAll('.pdf-preview').forEach(section => {
+    observer.observe(section);
+});
