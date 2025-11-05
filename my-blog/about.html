@@ -44,6 +44,81 @@
                 </div>
             </div>
         </section>
+                <!-- 文档下载区域 -->
+        <section class="documents-section">
+            <h2>📁 我的文档</h2>
+            <p>这里是我的一些重要文档，您可以在线预览或下载。</p>
+            
+            <div class="documents-grid">
+                <!-- 简历文档 -->
+                <div class="doc-card">
+                    <div class="doc-icon">📄</div>
+                    <h3>个人简历</h3>
+                    <p>我的工作经历、技能和教育背景</p>
+                    <div class="doc-actions">
+                        <a href="#resume-preview" class="doc-preview">在线预览</a>
+                        <a href="documents/resume.pdf" class="doc-download" download>下载简历</a>
+                    </div>
+                </div>
+                
+                <!-- 作品集文档 -->
+                <div class="doc-card">
+                    <div class="doc-icon">🎨</div>
+                    <h3>作品集</h3>
+                    <p>我的项目和作品案例展示</p>
+                    <div class="doc-actions">
+                        <a href="#portfolio-preview" class="doc-preview">在线预览</a>
+                        <a href="documents/portfolio.pdf" class="doc-download" download>下载作品集</a>
+                    </div>
+                </div>
+                
+                <!-- 证书文档 -->
+                <div class="doc-card">
+                    <div class="doc-icon">🏆</div>
+                    <h3>证书合集</h3>
+                    <p>学历证书和专业认证</p>
+                    <div class="doc-actions">
+                        <a href="#certificates-preview" class="doc-preview">在线预览</a>
+                        <a href="documents/certificates.pdf" class="doc-download" download>下载证书</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- PDF预览区域 -->
+        <section class="pdf-preview-section">
+            <h2>👀 文档预览</h2>
+            
+            <!-- 简历预览 -->
+            <div id="resume-preview" class="pdf-preview">
+                <h3>简历预览</h3>
+                <div class="pdf-viewer">
+                    <iframe src="documents/resume.pdf" width="100%" height="600px">
+                        <p>您的浏览器不支持PDF预览，请<a href="documents/resume.pdf">下载简历</a>查看。</p>
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- 作品集预览 -->
+            <div id="portfolio-preview" class="pdf-preview">
+                <h3>作品集预览</h3>
+                <div class="pdf-viewer">
+                    <iframe src="documents/portfolio.pdf" width="100%" height="600px">
+                        <p>您的浏览器不支持PDF预览，请<a href="documents/portfolio.pdf">下载作品集</a>查看。</p>
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- 证书预览 -->
+            <div id="certificates-preview" class="pdf-preview">
+                <h3>证书预览</h3>
+                <div class="pdf-viewer">
+                    <iframe src="documents/certificates.pdf" width="100%" height="600px">
+                        <p>您的浏览器不支持PDF预览，请<a href="documents/certificates.pdf">下载证书</a>查看。</p>
+                    </iframe>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
