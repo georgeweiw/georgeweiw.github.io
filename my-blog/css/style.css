@@ -335,3 +335,157 @@ footer {
         padding: 0 15px;
     }
 }
+/* 文档区域样式 */
+.documents-section {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+
+.documents-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.documents-section > p {
+    text-align: center;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.doc-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--border-color);
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.doc-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.doc-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.doc-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.doc-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.doc-preview, .doc-download {
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.doc-preview {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.doc-preview:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.doc-download {
+    background: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.doc-download:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* PDF预览区域样式 */
+.pdf-preview-section {
+    padding: 2rem 0;
+}
+
+.pdf-preview-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.pdf-preview {
+    margin-bottom: 3rem;
+    scroll-margin-top: 2rem; /* 为锚点链接提供偏移 */
+}
+
+.pdf-preview h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.pdf-viewer {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.pdf-viewer iframe {
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .doc-actions {
+        flex-direction: column;
+    }
+    
+    .doc-preview, .doc-download {
+        text-align: center;
+    }
+    
+    .pdf-viewer {
+        padding: 1rem;
+    }
+    
+    .pdf-viewer iframe {
+        height: 400px;
+    }
+}
